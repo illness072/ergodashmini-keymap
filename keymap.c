@@ -38,9 +38,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Lower
    * ,----------------------------------------------------------------------------------------------------------------------.
-   * | Tab  |   !  |   @  |   #  |   $  |   %  |   _  |                    |   +  |   ^  |   &  |   *  |   (  |   )  |Delete|
+   * | Tab  |   1  |   2  |   3  |   4  |   5  |   _  |                    |   +  |   6  |   7  |   8  |   9  |   0  |Delete|
    * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
-   * | Ctrl |   1  |   2  |   3  |   4  |   5  |   {  |                    |   }  |   6  |   7  |   8  |   9  |   0  |   "  |
+   * | Ctrl |   !  |   @  |   #  |   $  |   %  |   {  |                    |   }  |   ^  |   &  |   *  |   (  |   )  |   "  |
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
    * | Shift|      |      |      |      |      |   |  |                    |   ~  |      |      |      |      |      | Enter|
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
@@ -48,8 +48,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_LOWER] = LAYOUT(
-    KC_TAB,  KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_UNDS,                        KC_PLUS, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,  \
-    KC_LCTL, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_LCBR,                        KC_RCBR, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DQT, \
+    KC_TAB,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_UNDS,                        KC_PLUS, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,  \
+    KC_LCTL, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_LCBR,                        KC_RCBR, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DQT, \
     KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PIPE,                        KC_TILD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ENT, \
     KC_ESC,  XXXXXXX, KC_LALT, KC_LCMD,          LOWER,   KC_LSFT, KC_SPC,        KC_SPC, KC_ENT,  RAISE,            KC_HOME, KC_PGDN, KC_PGUP, KC_END   \
   ),
