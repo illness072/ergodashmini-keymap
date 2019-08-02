@@ -78,20 +78,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Adjust
    * ,----------------------------------------------------------------------------------------------------------------------.
-   * | POWER|      | PSCR |      |      |      |      |                    |      |      |      |      |      |      |      |
+   * | POWER|      | PSCR |      |      |      |      |                    |  Tab |  7H  |  8U  |  9PU |   -  |   /  |  Del |
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
-   * |      | VOL- | VOL+ | MUTE |      |      |      |                    |      |      |      |      |      |      |      |
+   * |      | VOL- | VOL+ | MUTE |      |      |      |                    |  0In |  4L  |   5  |  6R  |   +  |   *  |   (  |
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
-   * |      | BRI- | BRI+ |      |      |      |      |                    |      |      |      |      |      |      |      |
+   * |      | BRI- | BRI+ |      | Caps |  Ins |      |                    | Shift|  1E  |  2D  |  3PD |   =  |   ,  |   )  |
    * |------+-------------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
-   * |      |      |      |||||||| Lower|      |      |      ||||||||      |      |      | Raise||||||||      |      |Adjust|
+   * |      |      |      |||||||| Lower|      |      |      |||||||| Space| Enter| Bksp | Raise||||||||  0In | .Del |Adjust|
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_ADJUST] = LAYOUT(
-    KCX_PW,  XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-    XXXXXXX, KCX_VD,  KCX_VU,  KCX_MU,  XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-    XXXXXXX, KC_BRMD, KC_BRMU, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
-    XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX  \
+    KCX_PW,  XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC_TAB , KC_P7  , KC_P8  , KC_P9  , KC_PMNS, KC_PSLS, KC_DEL,  \
+    XXXXXXX, KCX_VD,  KCX_VU,  KCX_MU,  XXXXXXX, XXXXXXX, XXXXXXX,                        KC_P0  , KC_P4  , KC_P5  , KC_P6  , KC_PPLS, KC_PAST, KC_LPRN, \
+    XXXXXXX, KC_BRMD, KC_BRMU, XXXXXXX, KC_CAPS, KC_INS , XXXXXXX,                        KC_RSFT, KC_P1  , KC_P2  , KC_P3  , KC_PEQL, KC_COMM, KC_RPRN, \
+    XXXXXXX, XXXXXXX, XXXXXXX,          LOWER,   XXXXXXX, XXXXXXX, XXXXXXX,      KC_SPC , KC_PENT, KC_BSPC, RAISE  ,          KC_P0  , KC_PDOT, ADJUST   \
   )
 };
 
