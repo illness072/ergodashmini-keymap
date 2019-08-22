@@ -28,9 +28,6 @@ enum custom_keycodes {
 #define KC_VD KC__VOLDOWN
 #define KC_MU KC__MUTE
 
-#define KC_BRU KC_BRMU
-#define KC_BRD KC_BRMD
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_kc( \
   //,------+------+------+------+------+------+------.                  ,------+------+------+------+------+------+------.
@@ -62,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------+------|                  |------+------+------+------+------+------+------|
            ,  VD  ,  VU  ,  MU  ,      ,      ,XXXXXX,                   XXXXXX, LEFT , DOWN ,  UP  , RGHT ,      , F12  ,
   //|------+------+------+------+------+------+------+------.    ,------+------+------+------+------+------+------+------|
-           , BRD  , BRU  ,      ,      ,      ,      ,                         , HOME , PGDN , PGUP , END  ,      ,      ,
+           , BRMD , BRMU ,      ,      ,      ,      ,                         , HOME , PGDN , PGUP , END  ,      ,      ,
   //|------+------+------+------+------+------|      |      |    |      |      |------+------+------+------+------+------|
      XXXXXX,XXXXXX,XXXXXX,     LALT    , LCMD , LSFT , LSPC ,      RSPC , ENT  , DEL  ,             ,XXXXXX,XXXXXX,XXXXXX
   //`------+------+------+-------------+------+------+------'    `------+------+------+-------------+------+------+------'
