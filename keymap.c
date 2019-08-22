@@ -11,7 +11,6 @@ enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   LOWER,
   RAISE,
-  ADJUST,
 };
 
 #define EISU LALT(KC_GRV)
@@ -76,23 +75,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  XXXXXXX, KC_LALT,          LOWER  , KC_LCMD, KC_LSFT, KC_SPC,       KC_SPC,  KC_ENT,  KC_DEL,  RAISE  ,          XXXXXXX, XXXXXXX, ADJUST   \
     ),
 
-  /* Adjust
-   * ,----------------------------------------------------------------------------------------------------------------------.
-   * | POWER|      | PSCR |      |      |      |      ||||||||||||||||||||||  Tab |  7H  |  8U  |  9PU |   -  |   /  |  Del |
-   * |------+------+------+------+------+------+------||||||||||||||||||||||------+------+------+------+------+------+------|
-   * |      | VOL- | VOL+ | MUTE |      |      |      ||||||||||||||||||||||  0In |  4L  |   5  |  6R  |   +  |   *  |   (  |
-   * |------+------+------+------+------+------+======+======||||||||======+======+------+------+------+------+------+------|
-   * |      | BRI- | BRI+ |      | Caps |  Ins | Raise|      ||||||||      | Lower|  1E  |  2D  |  3PD |   =  |   ,  |   )  |
-   * |------+-------------+------+------+======+------| Space|||||||| Space|------+======+------+------+------+------+------|
-   * |      |      |      |||||||| Lower|      |      |      ||||||||      | Enter| Bksp | Raise||||||||  0In | .Del |Adjust|
-   * ,----------------------------------------------------------------------------------------------------------------------.
-   */
-  [_ADJUST] = LAYOUT(
-    KCX_PW,  XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC_TAB , KC_P7  , KC_P8  , KC_P9  , KC_PMNS, KC_PSLS, KC_DEL,  \
-    XXXXXXX, KCX_VD,  KCX_VU,  KCX_MU,  XXXXXXX, XXXXXXX, XXXXXXX,                        KC_P0  , KC_P4  , KC_P5  , KC_P6  , KC_PPLS, KC_PAST, KC_LPRN, \
-    XXXXXXX, KC_BRMD, KC_BRMU, XXXXXXX, KC_CAPS, KC_INS , RAISE  ,                        LOWER  , KC_P1  , KC_P2  , KC_P3  , KC_PEQL, KC_COMM, KC_RPRN, \
-    XXXXXXX, XXXXXXX, XXXXXXX,          LOWER  , XXXXXXX, XXXXXXX, KC_SPC,       KC_SPC , KC_PENT, KC_BSPC, RAISE  ,          KC_P0  , KC_PDOT, ADJUST   \
-  )
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -114,14 +96,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       } else {
         layer_off(_RAISE);
         update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      }
-      return false;
-      break;
-    case ADJUST:
-      if (record->event.pressed) {
-        layer_on(_ADJUST);
-      } else {
-        layer_off(_ADJUST);
       }
       return false;
       break;
